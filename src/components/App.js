@@ -39,7 +39,7 @@ const App = () => {
   return (
     <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
         {/* Search Section */}
-        <div>
+        <form>
           <label style={{ display: "block", marginBottom: "5px" }}>
             Search Movie
           </label>
@@ -48,10 +48,10 @@ const App = () => {
             value={searchQuery}
             onChange={handleInputChange}
             />
-            <button onClick={handleSearchClick} style={{ marginLeft: "5px" }}>
+            <button type="button" onClick={handleSearchClick} style={{ marginLeft: "5px" }}>
               Search
             </button>
-        </div>
+        </form>
 
         {/* Results Section */}
         {hasError === true && (
